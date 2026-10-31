@@ -33,13 +33,16 @@ These are civic proposals and technical initiatives, **not official government p
 
 - Public consultation platform: [Mauritius.Name](https://mauritius.name)
 - Related digital trust research: [Global Digital Trust Commons](https://github.com/dkissoondoyal/global-digital-trust-commons)
+- [Try the standalone legislative consultation demonstration](demo/index.html) (download and open locally)
+- [Demo instructions](demo/README.md)
+- [Production-source release checklist](SOURCE_RELEASE_CHECKLIST.md)
 - Development roadmap: [ROADMAP.md](ROADMAP.md)
 - Contribution guidance: [CONTRIBUTING.md](CONTRIBUTING.md)
 - Security reporting: [SECURITY.md](SECURITY.md)
 
 ## Repository status
 
-**Documentation-first / early public repository.** This initial release establishes the project scope and contribution framework. It does not yet contain an independently verified, installable version of the Mauritius.Name software. Code and sample datasets will be added only after ownership, privacy, licensing and security checks.
+**Documentation-first / early public repository.** The repository now includes a newly authored, browser-only demonstration of a fictional legislative reader and local amendment preview. It does not contain an independently verified, installable version of the Mauritius.Name software. Code and sample datasets will be added only after ownership, privacy, licensing and security checks.
 
 ## Maintainer
 
