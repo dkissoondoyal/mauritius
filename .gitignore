@@ -1,0 +1,26 @@
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+secrets/
+credentials/
+# Local editor and system files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+# Dependencies and build outputs
+node_modules/
+vendor/
+dist/
+build/
+coverage/
+# Backups and local exports
+*.sql
+*.sqlite
+*.bak
+*.zip
