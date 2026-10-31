@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Legislative Consultation - Local Demonstration</title>
+<style>
+:root{font-family:system-ui,sans-serif;color:#17212b;background:#f5f7fa}
+body{max-width:850px;margin:0 auto;padding:1.5rem;line-height:1.6}
+header,main,footer{background:white;border-radius:12px;padding:1.4rem;margin-bottom:1rem}
+h1,h2{line-height:1.25} .notice{background:#fff3d9;padding:.8rem;border-left:5px solid #a85e00}
+label{display:block;font-weight:650;margin-top:1rem}
+input,textarea,select,button{font:inherit;width:100%;box-sizing:border-box;padding:.6rem;margin-top:.25rem}
+button{background:#145d85;color:white;border:0;border-radius:6px;cursor:pointer;margin-top:1rem}
+button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #f5a623}
+article{border:1px solid #d6dee5;border-radius:8px;padding:1rem;margin-top:1rem}
+small{color:#46545e}
+</style>
+</head>
+<body>
+<header><h1>Legislative Consultation</h1><p>Standalone civic-technology demonstration for Mauritius.</p>
+<p class="notice"><strong>Demonstration only.</strong> The example bill is fictional. No comments are sent to a server, stored, or submitted to any public consultation. Do not enter personal or sensitive information.</p></header>
+<main>
+<section aria-labelledby="bill-title"><h2 id="bill-title">Illustrative Public Participation Bill</h2>
+<p><small>Fictional sample for interface testing - not Mauritius law or an actual bill.</small></p>
+<article><h3>Clause 1 - Purpose</h3><p>Public bodies should publish accessible summaries of proposed measures before inviting feedback.</p></article>
+<article><h3>Clause 2 - Accessibility</h3><p>Consultation materials should be available in formats that support broad public participation.</p></article>
+</section>
+<section aria-labelledby="feedback-title"><h2 id="feedback-title">Propose an amendment</h2>
+<form id="proposal">
+<label for="clause">Clause</label><select id="clause" required><option value="">Choose a clause</option><option value="1">Clause 1</option><option value="2">Clause 2</option></select>
+<label for="type">Feedback type</label><select id="type"><option>Proposed amendment</option><option>General comment</option></select>
+<label for="feedback">Your proposal (do not include personal data)</label><textarea id="feedback" required minlength="10" maxlength="2000" rows="5"></textarea>
+<button type="submit">Preview proposal locally</button>
+</form>
+<div id="result" role="status" aria-live="polite"></div>
+</section></main>
+<footer><small>Open demonstration. No network requests, cookies, analytics, persistent storage or production integration. Review source before reuse.</small></footer>
+<script>
+"use strict";
+document.getElementById("proposal").addEventListener("submit", function(event) {
+  event.preventDefault();
+  if (!this.reportValidity()) return;
+  const clause=document.getElementById("clause").value;
+  const type=document.getElementById("type").value;
+  const feedback=document.getElementById("feedback").value.trim();
+  if (feedback.length<10) return;
+  const result=document.getElementById("result");
+  result.replaceChildren();
+  const heading=document.createElement("h3");
+  heading.textContent="Local preview - not submitted";
+  const text=document.createElement("p");
+  text.textContent="Clause "+clause+" | "+type+": "+feedback;
+  result.append(heading,text);
+});
+</script>
+</body>
+</html>
